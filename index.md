@@ -3,5 +3,17 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
+realm: home
 ---
-<p> Bill is the best because he's writing a website for me. </p>
+
+<div class="row">
+  <div class="col">
+    <h2>
+      This site is under construction.
+    </h2>
+    <p>
+      We're excited to bring something new
+      to you soon!
+    </p>
+  </div>
+</div>
