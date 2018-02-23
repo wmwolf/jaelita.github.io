@@ -4,3 +4,4 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+<p> Bill is the best because he's writing a website for me. </p>
