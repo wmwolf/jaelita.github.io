@@ -1,0 +1,15 @@
+<hr>
+<footer>
+  <div class="row">
+    <div class="col text-center">
+      <p>
+        {% if page.has_english_version %}
+          Última Edición
+        {% else %}
+          Last Edited
+        {% endif %}
+        {{ site.time | date: " %B %Y " }}
+      </p>
+    </div>
+  </div>
+</footer>
