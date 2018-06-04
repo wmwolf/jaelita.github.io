@@ -1,11 +1,13 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary justify-content-between navbar-expand-md">
   <div class="container">
-    <a class="navbar-brand" href="/">Jael Martínez</a>
+    <a class="navbar-brand" href="/">Jael Martínez <span class="d-none d-md-inline"> | <small>Environmental Science & Management</small></span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
+      </ul>
+      <ul class="navbar-nav text-right">
         {% if page.section == 'resume' %}
           <li class="nav-item active">
         {% else %}
@@ -27,26 +29,24 @@
         {% endif %}          
             <a class="nav-link" href="/projects">Projects</a>
         </li>
+        {% if page.has_english_version or page.has_spanish_version %}
+          <li class="nav-item">
+            {% if page.has_spanish_version and page.spanish_version %}
+              <a class="nav-link" id="translate" href="{{site.baseurl}}{% link esp/index.html%}">
+                <!-- <button class="nav-item btn btn-sm btn-outline-white float-right"> -->
+                  Español
+                <!-- </button> -->
+              </a>
+            {% else %}
+              <a class="nav-link" id="translate" href="{{ site.baseurl }}{% link en/index.html %}">
+                <!-- <button class="nav-item btn btn-sm btn-outline-white float-right"> -->
+                  English
+                <!-- </button> -->
+              </a>
+            {% endif %}
+          </li>
+        {% endif %}
       </ul>
-      {% if page.has_english_version or page.has_spanish_version %}
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          {% if page.has_spanish_version and page.spanish_version %}
-            <a class="nav-link" id="translate" href="{{site.baseurl}}{% link esp/index.html%}">
-              <!-- <button class="nav-item btn btn-sm btn-outline-white float-right"> -->
-                Español
-              <!-- </button> -->
-            </a>
-          {% else %}
-            <a class="nav-link" id="translate" href="{{ site.baseurl }}{% link en/index.html %}">
-              <!-- <button class="nav-item btn btn-sm btn-outline-white float-right"> -->
-                English
-              <!-- </button> -->
-            </a>
-          {% endif %}
-        </li>
-      </ul>
-      {% endif %}
     </div>
   </div>
 </nav>
